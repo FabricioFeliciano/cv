@@ -1,0 +1,250 @@
+@import "../../../assets/style/colors.scss";
+
+.textarea {
+  width: fit-content;
+  height: fit-content;
+  width: 100%;
+
+  >.title {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: 12px;
+    color: $greyDark;
+    margin-bottom: 6px;
+  }
+
+  >.field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    min-height: 40px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid $greyLight;
+    transition: border 0.5s;
+    position: relative;
+    resize: vertical;
+    overflow: hidden;
+
+    &.required:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-top: 8px solid $yellow;
+      border-left: 8px solid $yellow;
+    }
+
+    &:hover {
+      border: 1px solid $greyDark;
+    }
+
+    &.active {
+      border: 1px solid $secondary;
+    }
+
+    >.decoration {
+      display: flex;
+      align-items: center;
+      margin-right: 5px;
+      gap: 5px;
+    }
+
+    >textarea {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "Ubuntu";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: #2b304f;
+      background-color: transparent;
+      resize: none;
+
+      &::placeholder {
+        color: $greyLight;
+      }
+    }
+
+    >.icons {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      gap: 5px;
+      color: #141b4d;
+      margin-left: 5px;
+
+      >.icon {
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &.error {
+      border-bottom: 2px $danger solid;
+    }
+  }
+
+  >.tooltip {
+    display: flex;
+    opacity: 0;
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    z-index: 5000;
+    filter: drop-shadow(0px 0px 3px rgba(32, 47, 47, 0.36));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(32px);
+    transition: opacity 0.25s linear;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-color: transparent transparent $bgGreyLight transparent;
+      border-width: 8px;
+      border-style: solid;
+      margin: 0 10px;
+    }
+
+    .content {
+      z-index: 7500;
+      width: max-content;
+      max-width: 230px;
+      height: auto;
+      background-color: $bgGreyLight;
+      border: 0;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 13px;
+      font-weight: 400;
+      color: $secondaryDark;
+    }
+
+    &.left {
+      align-items: flex-start;
+    }
+
+    &.right {
+      align-items: flex-end;
+    }
+  }
+
+  >.help {
+    width: auto;
+    height: fit-content;
+    justify-content: center;
+    position: absolute;
+    overflow: visible;
+    display: none;
+
+    >i {
+      z-index: 7501;
+      position: absolute;
+      font-size: 1.2rem;
+      color: #e2e6f3;
+      transform: translate(20px, -8px);
+    }
+
+    >.main {
+      width: inherit;
+      z-index: 7500;
+      position: absolute;
+      transform: translate(0, 4px);
+      display: flex;
+      justify-content: flex-start;
+      overflow: visible;
+
+      >.content {
+        position: absolute;
+        width: max-content;
+        max-width: 240px;
+        height: auto;
+        background-color: #e2e6f3;
+        padding: 8px 11px;
+        box-shadow: 0px 0px 3px rgba(32, 47, 47, 0.36);
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 400;
+        word-break: break-word;
+        color: #2b304f !important;
+
+        .line:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  &.debug {
+    background-color: green;
+
+    .title {
+      background-color: red;
+    }
+
+    .field {
+      background-color: blue;
+    }
+  }
+
+  &:hover .help {
+    display: flex;
+  }
+
+  &.disabled,
+  &.readonly {
+    >.field {
+      background-color: #ebebeb;
+
+      >.value {
+        color: #777;
+      }
+
+      >.icons {
+        color: #777;
+
+        >.icon {
+          &:hover {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    >.field {
+      >.value {
+        cursor: inherit;
+      }
+
+      &:hover {
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  &.readonly {
+    >.field {
+      >.value {
+        color: #141b4d;
+      }
+    }
+  }
+}

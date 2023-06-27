@@ -1,0 +1,40 @@
+$primary: #1e279c;
+$primaryDark: darken($primary, 15%);
+$primaryLight: lighten($primary, 15%);
+
+$secondary: #444ba8;
+$secondaryDark: darken($secondary, 15%);
+$secondaryLight: lighten($secondary, 15%);
+
+$success: #2aa146;
+$successDark: darken($success, 15%);
+$successLight: lighten($success, 15%);
+
+$warning: #f79e29;
+$warningDark: darken($warning, 15%);
+$warningLight: lighten($warning, 15%);
+
+$danger: #eb3250;
+$dangerDark: darken($danger, 15%);
+$dangerLight: lighten($danger, 15%);
+
+$admin: #5e1c9f;
+$adminDark: darken($admin, 15%);
+$adminLight: lighten($admin, 15%);
+
+$link: #002cff;
+$linkDark: darken($link, 15%);
+$linkLight: lighten($link, 15%);
+
+$grey: #7f8faf;
+$greyDark: darken($grey, 15%);
+$greyLight: lighten($grey, 15%);
+
+$yellow: #fdcf38;
+$yellowDark: darken($yellow, 15%);
+$yellowLight: lighten($yellow, 15%);
+
+//BG
+$bgGrey: #adb8d3;
+$bgGreyDark: darken($bgGrey, 15%);
+$bgGreyLight: lighten($bgGrey, 15%);

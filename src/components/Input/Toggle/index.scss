@@ -1,0 +1,44 @@
+@import '../../../assets/style/colors';
+
+.toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 6px;
+  margin-bottom: 4px;
+
+  >.box {
+    display: flex;
+    width: 36px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: $bgGrey;
+    transition: color 0.2s ease;
+
+    &::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 7px;
+      background-color: #fff;
+      transition: all 0.2s ease;
+    }
+  }
+
+  &.toggled {
+    >.box {
+      background-color: $yellow;
+
+      &::before {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  >.title {
+    font-size: 0.875rem;
+    color: #2b304f;
+  }
+}

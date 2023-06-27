@@ -1,0 +1,43 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  gap: 4px;
+
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+
+  &>*:not(:last-child) {
+    margin-bottom: 6px;
+  }
+}
+
+.code {
+  background-color: #000;
+  padding: 10px;
+  color: #fff;
+}
+
+div.form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-right: -4px;
+
+  >* {
+    border-right: 4px solid transparent;
+  }
+}
+
+.link:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+
+  font-family: Ubuntu,
+  Verdana,
+  Geneva,
+  Tahoma,
+  sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 5px 0 10px 0;
+}
+
+hr {
+  height: 1px;
+  background-image: linear-gradient(to right, #fff, #aaa, #fff);
+  border: 0;
+  margin: 20px 0;
+}
+
+$mps: (
+  1,
+  1px),
+  (2, 2px),
+  (3, 5px),
+  (4, 8px),
+  (5, 10px),
+  (6, 15px),
+  (7, 20px
+);
+
+//Margin
+.m {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      margin: nth($mp, 2);
+    }
+  }
+}
+
+.mt {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      margin-top: nth($mp, 2);
+    }
+  }
+}
+
+.mb {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      margin-bottom: nth($mp, 2);
+    }
+  }
+}
+
+.ml {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      margin-left: nth($mp, 2);
+    }
+  }
+}
+
+.mr {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      margin-right: nth($mp, 2);
+    }
+  }
+}
+
+.mv {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      margin-top: nth($mp, 2);
+      margin-bottom: nth($mp, 2);
+    }
+  }
+}
+
+.mh {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      margin-left: nth($mp, 2);
+      margin-right: nth($mp, 2);
+    }
+  }
+}
+
+//Padding
+.p {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      padding: nth($mp, 2) !important;
+    }
+  }
+}
+
+.pt {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      padding-top: nth($mp, 2) !important;
+    }
+  }
+}
+
+.pb {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      padding-bottom: nth($mp, 2) !important;
+    }
+  }
+}
+
+.pl {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      padding-left: nth($mp, 2) !important;
+    }
+  }
+}
+
+.pr {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      padding-right: nth($mp, 2) !important;
+    }
+  }
+}
+
+.pv {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      padding: nth($mp, 2) 0 !important;
+    }
+  }
+}
+
+.ph {
+  @each $mp in $mps {
+    &-#{nth($mp, 1)} {
+      padding: 0 nth($mp, 2) !important;
+    }
+  }
+}
+
+.w {
+  @for $i from 1 through 1200 {
+    &-#{$i} {
+      width: #{$i}px !important;
+    }
+  }
+}
+
+.h {
+  @for $i from 1 through 1200 {
+    &-#{$i} {
+      height: #{$i}px !important;
+    }
+  }
+}
+
+$whp: (
+  10,
+  10%),
+  (15, 15%),
+  (20, 20%),
+  (25, 25%),
+  (30, 30%),
+  (33, 33.33%),
+  (40, 40%),
+  (50, 50%),
+  (60, 60%),
+  (75, 75%),
+  (80, 80%),
+  (90, 90%),
+  (100, 100%
+);
+
+.w {
+  @each $wh in $whp {
+    &-#{nth($wh, 1)}p {
+      width: nth($wh, 2) !important;
+    }
+  }
+}
+
+.h {
+  @each $wh in $whp {
+    &-#{nth($wh, 1)}p {
+      height: nth($wh, 2) !important;
+    }
+  }
+}
+
+.scroll {
+
+  overflow: scroll;
+
+  &-x {
+    overflow-x: scroll;
+    overflow-x: hidden;
+  }
+
+  &-y {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+
+*[class*="scroll"] {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #fafafa;
+    z-index: 99;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #ececec;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.25rem;
+  }
+}
+
+$ts: (
+  1,
+  1rem),
+  (2, 1.2rem),
+  (3, 1.4rem),
+  (4, 1.6rem),
+  (5, 1.8rem),
+  (6, 2rem),
+  (7, 2.2rem),
+  (8, 2.4rem),
+  (9, 2.6rem),
+  (10, 2.8rem
+);
+
+.text {
+  @each $t in $ts {
+    &-#{nth($t, 1)}p {
+      font-size: nth($t, 2)+'x' !important;
+    }
+  }
+}

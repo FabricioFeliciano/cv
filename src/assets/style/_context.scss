@@ -1,0 +1,28 @@
+@use "./colors.scss";
+
+$contexts: (
+  'primary'$primaryLight),
+  ('secondary'$secondaryLight),
+  ('success'$successLight),
+  ('warning'$warningLight),
+  ('danger'$dangerLight),
+  ('link'$linkLight),
+  ('admin'$adminLight),
+  ('grey'$greyLight
+);
+
+.text {
+  @each $context in $contexts {
+    &-#{nth($context, 1)} {
+      color: nth($context, 2) !important;
+    }
+  }
+}
+
+.bg {
+  @each $context in $contexts {
+    &-#{nth($context, 1)} {
+      background-color: nth($context, 2) !important;
+    }
+  }
+}

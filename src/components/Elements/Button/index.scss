@@ -1,0 +1,52 @@
+@use "../../../assets/style/colors.scss";
+
+button.button {
+    background-color: colors.$grey;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: #fff;
+    font-weight: 500;
+    height: 36px;
+
+    &:hover {
+        background-color: colors.$greyDark;
+    }
+
+    $cs: (
+        "primary" colors.$primary colors.$primaryDark),
+        ("secondary" colors.$secondary colors.$secondaryDark),
+        ("success" colors.$success colors.$successDark),
+        ("warning" colors.$warning colors.$warningDark),
+        ("danger" colors.$danger colors.$dangerDark),
+        ("admin" colors.$admin colors.$adminDark),
+        ("link" colors.$link colors.$linkDark),
+        ("grey" colors.$grey colors.$greyDark),
+        ("yellow" colors.$yellow colors.$yellowDark
+    );
+
+@each $c in $cs {
+    &.#{nth($c, 1)} {
+        background-color: #{nth($c, 2)};
+
+        &:hover {
+            background-color: #{nth($c, 3)};
+        }
+    }
+}
+}
+
+div.buttons>* {
+    border-radius: 0;
+    margin-bottom: 10px;
+
+    &:first-child {
+        border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+        border-radius: 0 5px 5px 0;
+    }
+}

@@ -1,0 +1,59 @@
+.form {
+  >.fields {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    &>* {
+      padding: 0 5px 0 5px;
+    }
+
+    >span {
+      height: 0;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  >.functions {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  >.loading {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    >i {
+      position: absolute;
+      font-size: 40px;
+      color: #273b85;
+    }
+  }
+
+  &.debug {
+    >.fields {
+      background-color: lightcoral;
+    }
+
+    >.fields>*>.title {
+      background-color: yellow;
+    }
+
+    >.fields>*>.field {
+      background-color: chocolate;
+    }
+
+    >.functions {
+      background-color: blue;
+    }
+  }
+}
