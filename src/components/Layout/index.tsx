@@ -24,7 +24,6 @@ const Layout: React.FC = (props) => {
         <li className={`${pathName === 'experiencia' ? 'selected' : ''}`} onClick={() => changeRoute('experiencia')}>Experiência</li>
         <li className={`${pathName === 'tecnologias' ? 'selected' : ''}`} onClick={() => changeRoute('tecnologias')}>Tecnologias</li>
         <li className={`${pathName === 'cursos' ? 'selected' : ''}`} onClick={() => changeRoute('cursos')}>Cursos</li>
-        <li className={`${pathName === 'idiomas' ? 'selected' : ''}`} onClick={() => changeRoute('idiomas')}>Idiomas</li>
         <li className={`${pathName === 'mais' ? 'selected' : ''}`} onClick={() => changeRoute('mais')}>Mais</li>
     </>;
 

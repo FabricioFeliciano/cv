@@ -23,6 +23,7 @@
             >.top {
                 font-weight: 100;
                 padding: 10px;
+                border-radius: 4px;
                 color: #222222;
                 background-color: #fff;
                 height: 130px;
@@ -63,7 +64,8 @@
             overflow: visible;
             z-index: 1000;
 
-            .content {
+
+            >.content {
                 box-shadow: 0 0 100px #000000;
                 height: 210px;
                 transform: scale(1.15);
