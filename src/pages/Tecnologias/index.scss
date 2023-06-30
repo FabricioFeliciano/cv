@@ -1,0 +1,90 @@
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-right: -10px;
+
+    >.technology {
+        display: flex;
+        align-items: center;
+        width: 14.28%;
+        height: 150px;
+        border-right: 10px solid transparent;
+        overflow: hidden;
+
+        >.content {
+            height: 130px;
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 0 0 1px #000000;
+
+            >.top {
+                font-weight: 100;
+                padding: 10px;
+                color: #222222;
+                background-color: #fff;
+                height: 130px;
+
+                >.logo {
+                    display: flex;
+                    justify-content: center;
+                    height: 80px;
+
+                    >img {
+                        height: 75px;
+                        max-width: 150px;
+                        justify-self: center;
+                    }
+                }
+
+                >.name {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+
+                >.time {
+                    font-size: 1rem;
+                    font-weight: 200;
+                }
+            }
+
+            >.desc {
+                padding: 10px;
+                height: 80px;
+                font-size: 0.7rem;
+                background-color: #333;
+                color: #bcbcbc;
+            }
+        }
+
+        &:hover {
+            overflow: visible;
+            z-index: 1000;
+
+            .content {
+                box-shadow: 0 0 100px #000000;
+                height: 210px;
+                transform: scale(1.15);
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .technologies {
+        >.technology {
+            width: 20%;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .technologies {
+        >.technology {
+            width: 50%;
+        }
+    }
+}

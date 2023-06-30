@@ -1,0 +1,79 @@
+.about {
+
+    >.cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        row-gap: 10px;
+
+        >.card {
+            display: flex;
+            align-items: center;
+            overflow: visible;
+            width: 220px;
+            height: 115px;
+
+            >.body {
+                position: absolute;
+                width: 220px;
+                height: 115px;
+                background-color: #181818;
+                transition: all 0.3s ease-in-out;
+                border-radius: 6px;
+                box-shadow: rgba(0, 0, 0, 0.75) 0 3px 10px;
+                overflow: hidden;
+
+                >img {
+                    width: 100%;
+                }
+
+                >.info {
+                    padding: 20px;
+
+                    >ul {
+                        font-size: 16px;
+                        color: #fff;
+
+                        >li {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+            &:hover>.body {
+                z-index: 500;
+                width: 320px;
+                height: 300px;
+            }
+
+        }
+    }
+
+    >ul {
+        list-style: disc;
+        margin-left: 50px;
+        color: #ccc;
+
+        >li {
+            margin-bottom: 10px;
+        }
+
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .technologies {
+        >.technology {
+            width: 20%;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .technologies {
+        >.technology {
+            width: 50%;
+        }
+    }
+}

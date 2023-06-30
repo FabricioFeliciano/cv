@@ -1,0 +1,66 @@
+.employments {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    row-gap: 10px;
+    gap: 10px;
+
+    >.employment {
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #000000b0;
+        color: #fff;
+        width: calc(50% - 10px);
+
+        >.logo {
+            height: 60px;
+        }
+
+        >.company {
+            font-size: 1.6rem;
+        }
+
+        >.period {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        >.missions {
+            width: 100%;
+
+            >.mission {
+                width: 100%;
+                font-weight: 100;
+                color: #ffffffa0;
+            }
+        }
+
+        >.skills {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+
+            >.skill {
+                background-color: #ccc;
+                padding: 4px 8px;
+                border-radius: 3px;
+                color: #000;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .employments {
+        >.employment {
+            width: 100%;
+            max-width: none;
+
+            >img {
+                height: 60px;
+            }
+        }
+    }
+}

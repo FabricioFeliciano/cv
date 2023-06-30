@@ -38,6 +38,11 @@ div.form {
   }
 }
 
-.link:hover {
-  cursor: pointer;
+.link {
+  color: rgb(83, 136, 250);
+
+  &:hover {
+    cursor: pointer;
+    font-weight: 500;
+  }
 }

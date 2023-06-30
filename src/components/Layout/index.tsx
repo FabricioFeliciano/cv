@@ -9,12 +9,24 @@ const Layout: React.FC = (props) => {
 
     const navigate = useNavigate();
 
-    const [selected, setSelected] = useState('inicio');
+    const [navigateVisible, setNavigateVisible] = useState(false);
 
     const changeRoute = (route: string) => {
-        setSelected(route);
+        setNavigateVisible(false);
         navigate('/' + route);
     }
+
+    const pathName = document.location.pathname.replace('/', '');
+
+    const items = <>
+        <li className={`${pathName === '' ? 'selected' : ''}`} onClick={() => changeRoute('')}>Início</li>
+        <li className={`${pathName === 'formacao' ? 'selected' : ''}`} onClick={() => changeRoute('formacao')}>Formação</li>
+        <li className={`${pathName === 'experiencia' ? 'selected' : ''}`} onClick={() => changeRoute('experiencia')}>Experiência</li>
+        <li className={`${pathName === 'tecnologias' ? 'selected' : ''}`} onClick={() => changeRoute('tecnologias')}>Tecnologias</li>
+        <li className={`${pathName === 'cursos' ? 'selected' : ''}`} onClick={() => changeRoute('cursos')}>Cursos</li>
+        <li className={`${pathName === 'idiomas' ? 'selected' : ''}`} onClick={() => changeRoute('idiomas')}>Idiomas</li>
+        <li className={`${pathName === 'mais' ? 'selected' : ''}`} onClick={() => changeRoute('mais')}>Mais</li>
+    </>;
 
     return (
         <div className='layout'>
@@ -23,15 +35,19 @@ const Layout: React.FC = (props) => {
                     <div className="name">
                         FABRICIO FELICIANO
                     </div>
-                    <ul className='items'>
-                        <li className={`${selected === '' ? 'selected' : ''}`} onClick={() => changeRoute('')}>Início</li>
-                        <li className={`${selected === 'formacao' ? 'selected' : ''}`} onClick={() => changeRoute('formacao')}>Formação</li>
-                        <li className={`${selected === 'experiencia' ? 'selected' : ''}`} onClick={() => changeRoute('experiencia')}>Experiência</li>
-                        <li className={`${selected === 'tecnologias' ? 'selected' : ''}`} onClick={() => changeRoute('tecnologias')}>Tecnologias</li>
-                        <li className={`${selected === 'cursos' ? 'selected' : ''}`} onClick={() => changeRoute('cursos')}>Cursos</li>
-                        <li className={`${selected === 'idiomas' ? 'selected' : ''}`} onClick={() => changeRoute('idiomas')}>Idiomas</li>
-                        <li className={`${selected === 'mais' ? 'selected' : ''}`} onClick={() => changeRoute('mais')}>Mais</li>
-                    </ul>
+
+                    <div className="navigate show-only-small">
+                        <IconLink icon='icon icon-list' onClick={() => setNavigateVisible(!navigateVisible)} />
+                        {
+                            navigateVisible &&
+                            <ul className='items'>{items}</ul>
+                        }
+                    </div>
+
+                    <ul className='items hide-on-small'>{items}</ul>
+
+
+
                 </div>
                 <div className="right">
                     <IconLink icon='icon icon-envelope' tooltip={{ content: 'E-mail', position: 'right' }} onClick={() => { window.location.href = 'mailto:fabriciofeliciano@hotmail.com'; }} />
@@ -39,7 +55,7 @@ const Layout: React.FC = (props) => {
                 </div>
             </div>
 
-            <div className="page">
+            <div className="page scroll">
                 {props.children}
             </div>
         </div>

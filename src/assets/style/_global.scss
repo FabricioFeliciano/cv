@@ -208,15 +208,13 @@ $whp: (
 
 .scroll {
 
-  overflow: scroll;
-
   &-x {
-    overflow-x: scroll;
-    overflow-x: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   &-y {
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
   }
 }

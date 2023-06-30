@@ -1,0 +1,74 @@
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-right: -10px;
+
+    >.course {
+        width: 25%;
+        min-height: 150px;
+        border-right: 10px solid transparent;
+
+
+
+        >.content {
+            height: 100%;
+            color: #ccc;
+            background-color: #000000d5;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: 100;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            >.name {
+                font-size: 1rem;
+                margin-bottom: 10px;
+                font-weight: 400;
+            }
+
+            >.row {
+                display: flex;
+                justify-content: space-between;
+
+                >.school {
+                    font-size: 1rem;
+                    color: #44dd65d7;
+                }
+
+                >.date {
+                    font-size: 1rem;
+                    color: #bcbcbc;
+                    margin-bottom: 5px;
+                }
+            }
+
+            >.info {
+                list-style: disc;
+                list-style-position: inside;
+                font-size: 0.8rem;
+                color: #bcbcbc;
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .courses {
+        >.course {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .courses {
+        >.course {
+            width: 50%;
+        }
+    }
+}

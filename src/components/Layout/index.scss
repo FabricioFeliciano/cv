@@ -7,6 +7,7 @@
   background-image: url('../../assets/images/bg01.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   &::before {
     content: '';
@@ -75,8 +76,9 @@
           transition: color 0.5s ease;
           cursor: pointer;
 
-          &.active {
+          &.selected {
             color: #fff;
+            border-bottom: 1px solid #fff;
           }
 
           &:hover {
@@ -96,8 +98,10 @@
 
   >.page {
     margin-top: 68px;
+    height: -webkit-fill-available;
     padding: 20px 50px;
     position: relative;
+    overflow: hidden auto;
 
     h1,
     h2,
@@ -136,52 +140,77 @@
         gap: 10px;
       }
     }
+  }
+}
 
-    .cards {
-      display: flex;
-      gap: 10px;
+@media only screen and (max-width: 767px) {
+  .layout {
+    &::before {
+      right: 0;
+    }
 
-      >.card {
-        display: flex;
-        align-items: center;
-        overflow: visible;
-        width: 220px;
-        height: 115px;
+    >.topbar {
+      padding: 0 20px;
 
-        >.body {
-          position: absolute;
-          width: 220px;
-          height: 115px;
-          background-color: #181818;
-          transition: all 0.3s ease-in-out;
-          border-radius: 6px;
-          box-shadow: rgba(0, 0, 0, 0.75) 0 3px 10px;
-          overflow: hidden;
+      >.left {
+        gap: 30px;
 
-          >img {
-            width: 100%;
-          }
+        >.navigate {
 
-          >.info {
-            padding: 20px;
+          >ul.items {
+            user-select: none;
+            position: fixed;
+            top: 70px;
+            left: 140px;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            background-color: #000000dc;
+            width: 150px;
+            z-index: 200;
+            padding: 10px;
+            row-gap: 30px;
 
-            >ul {
+            &::before {
+              content: '';
+              border: 10px solid transparent;
+              border-bottom: 10px solid #000000dc;
+              width: 0;
+              height: 0;
+              top: -20px;
+              left: 65px;
+              position: absolute;
+            }
+
+            >li {
+              color: #e5e5e5;
               font-size: 16px;
-              color: #fff;
+              transition: color 0.5s ease;
+              cursor: pointer;
 
-              >li {
-                margin-bottom: 10px;
+              &.active {
+                color: #fff;
+              }
+
+              &:hover {
+                color: #ffffff80;
               }
             }
           }
         }
+      }
 
-        &:hover>.body {
-          z-index: 500;
-          width: 320px;
-          height: 300px;
-        }
+      >.right {
+        gap: 10px;
+      }
+    }
 
+    >.page {
+
+      padding: 20px;
+
+      >.info {
+        width: 100%;
       }
     }
   }
