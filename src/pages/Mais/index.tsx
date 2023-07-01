@@ -13,7 +13,6 @@ const Mais: React.FC = () => {
     return <Layout>
 
         <div className='info'>
-            <h2><i className='icon icon-phone' /> (21) 99799-9959</h2>
             <h3> <i className='icon icon-person' /> Um pouco mais sobre mim...</h3>
         </div>
         <div className="about">
@@ -72,9 +71,9 @@ const Mais: React.FC = () => {
             <h3 className='mt-7'> <i className='icon icon-person' /> Sobre este site</h3>
             <ul>
                 <li>Desenvolvido com React</li>
-                <li>Componentes criados do zero</li>
+                <li>Componentes sem dependência</li>
                 <li>Typescript</li>
-                <li>SASS</li>
+                <li>Sass</li>
                 <li>Repositório: <span className='link' onClick={() => window.open('https://github.com/FabricioFeliciano/cv', '_blank', 'noreferrer')} >https://github.com/FabricioFeliciano/cv</span> </li>
             </ul>
         </div>

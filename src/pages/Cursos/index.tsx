@@ -8,7 +8,7 @@ const Cursos: React.FC = () => {
 
     const courses = [
         {
-            name: "NTW Setup",
+            name: "NLW Setup",
             school: "Rockeseat",
             date: "2023 janeiro",
             info: ["Node.js / React / React Native"]

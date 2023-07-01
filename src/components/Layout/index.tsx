@@ -20,10 +20,12 @@ const Layout: React.FC = (props) => {
 
     const items = <>
         <li className={`${pathName === '' ? 'selected' : ''}`} onClick={() => changeRoute('')}>Início</li>
+        <li className={`${pathName === 'resumo' ? 'selected' : ''}`} onClick={() => changeRoute('resumo')}>Resumo</li>
         <li className={`${pathName === 'formacao' ? 'selected' : ''}`} onClick={() => changeRoute('formacao')}>Formação</li>
         <li className={`${pathName === 'experiencia' ? 'selected' : ''}`} onClick={() => changeRoute('experiencia')}>Experiência</li>
         <li className={`${pathName === 'tecnologias' ? 'selected' : ''}`} onClick={() => changeRoute('tecnologias')}>Tecnologias</li>
         <li className={`${pathName === 'cursos' ? 'selected' : ''}`} onClick={() => changeRoute('cursos')}>Cursos</li>
+        <li className={`${pathName === 'contato' ? 'selected' : ''}`} onClick={() => changeRoute('contato')}>Contato</li>
         <li className={`${pathName === 'mais' ? 'selected' : ''}`} onClick={() => changeRoute('mais')}>Mais</li>
     </>;
 
@@ -32,7 +34,7 @@ const Layout: React.FC = (props) => {
             <div className="topbar">
                 <div className="left">
                     <div className="name">
-                        FABRICIO FELICIANO
+                        FABRICIO
                     </div>
 
                     <div className="navigate show-only-small">

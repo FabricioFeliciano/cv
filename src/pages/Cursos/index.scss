@@ -6,7 +6,7 @@
 
     >.course {
         width: 25%;
-        min-height: 150px;
+        min-height: 130px;
         border-right: 10px solid transparent;
 
         >.content {
@@ -27,7 +27,7 @@
             >.name {
                 font-size: 1rem;
                 margin-bottom: 10px;
-                font-weight: 400;
+                font-weight: 700;
             }
 
             >.row {
@@ -36,13 +36,13 @@
 
                 >.school {
                     font-size: 1rem;
+                    font-weight: 700;
                     color: #1f8f64;
                 }
 
                 >.date {
                     font-size: 1rem;
                     color: #161616;
-                    margin-bottom: 5px;
                 }
             }
 

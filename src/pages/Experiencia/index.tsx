@@ -4,9 +4,6 @@ import './index.scss';
 
 import Layout from '../../components/Layout';
 
-import employment01 from '../../assets/images/employment01.png';
-import employment02 from '../../assets/images/employment02.png';
-
 const Experiencia: React.FC = () => {
 
     const employments = [
@@ -56,12 +53,12 @@ const Experiencia: React.FC = () => {
                 employments.map((e, i) => {
                     return <div key={i} className='employment'>
                         <img className="logo" alt={e.company} src={require('../../assets/images/' + e.logo)} />
-                        {/* <div className='company'>{e.company}</div> */}
+                        <div className="position">{e.position}</div>
                         <div className='period'><i className='icon icon-calendar text-link mr-4' /> {e.period}</div>
                         <div className="missions">
                             {
                                 e.missions.map((m, i) => <div className='mission' key={i}>
-                                    <i className='icon icon-check text-link mr-4' />
+                                    <i className='icon icon-arrow-alt-circle-right text-link mr-4' />
                                     {m}
                                 </div>)
                             }
