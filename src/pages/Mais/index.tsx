@@ -12,7 +12,7 @@ import familia04 from '../../assets/images/familia04.jpg';
 const Mais: React.FC = () => {
     return <Layout>
 
-        <div className='info'>
+        <div className='info mt-7'>
             <h3> <i className='icon icon-person' /> Um pouco mais sobre mim...</h3>
         </div>
         <div className="about">

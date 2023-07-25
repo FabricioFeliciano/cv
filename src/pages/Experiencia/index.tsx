@@ -11,7 +11,7 @@ const Experiencia: React.FC = () => {
             company: "Processor",
             logo: "employment01.png",
             position: "Desenvolvedor Full Stack Sênior",
-            period: 'junho 2020 até agora',
+            period: 'junho 2020 até junho 2023',
             missions: [
                 "Criação de framework front-end próprio com ReactJS ou VueJS.",
                 "Suporte ao portal de gestão de serviços SaaS da empresa, com ênfase no front-end e criação de componentes.",
