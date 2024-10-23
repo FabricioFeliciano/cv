@@ -4,10 +4,10 @@
   position: absolute;
   inset: 0;
   font-family: Ubuntu;
-  background-image: url('../../assets/images/bg01.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: url('../../assets/images/bg02.jpg');
+  background-repeat: repeat;
+  //background-size: cover;
+  //background-position: center;
 
   &::before {
     content: '';
@@ -77,12 +77,12 @@
           cursor: pointer;
 
           &.selected {
-            color: #fff;
-            border-bottom: 1px solid #fff;
+            color: #f73a3a;
+            border-bottom: 1px solid #f73a3a;
           }
 
           &:hover {
-            color: #ffffff80;
+            color: #ff687c;
           }
         }
 
@@ -207,7 +207,7 @@
 
     >.page {
 
-      padding: 20px;
+      padding: 20px 10px;
 
       >.info {
         width: 100%;

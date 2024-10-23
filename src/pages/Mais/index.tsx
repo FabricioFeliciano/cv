@@ -23,7 +23,7 @@ const Mais: React.FC = () => {
                         <img src={familia01} />
                         <div className="info">
                             <ul>
-                                <li>45 anos</li>
+                                <li>46 anos</li>
                                 <li>Heterossexual</li>
                                 <li>Cisgênero</li>
                             </ul>
@@ -35,7 +35,7 @@ const Mais: React.FC = () => {
                         <img src={familia02} />
                         <div className="info">
                             <ul>
-                                <li>Casado (23 anos)</li>
+                                <li>Casado (24 anos)</li>
                                 <li>Marido da Roberta</li>
                                 <li>Pai de família</li>
                             </ul>
@@ -60,8 +60,8 @@ const Mais: React.FC = () => {
                         <div className="info">
                             <ul>
                                 <li>Morador de Cabo Frio - RJ</li>
-                                <li>Remoto há 6 anos</li>
-                                <li>PJ se necessário</li>
+                                <li>Remoto há 7 anos</li>
+                                <li>PJ, mas CLT se necessário</li>
                             </ul>
                         </div>
                     </div>

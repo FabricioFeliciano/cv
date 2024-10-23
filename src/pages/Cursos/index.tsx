@@ -72,11 +72,6 @@ const Cursos: React.FC = () => {
             date: "2016 abril"
         },
         {
-            name: "Metodologias Ágeis e Conceitos Lean para o Desenvolvimento de Software",
-            school: "Módulo Security",
-            date: "2016 fevereiro"
-        },
-        {
             name: "ITMP - Os Princípios de Gerenciamento de TI",
             school: "EXIN Brasil",
             date: "2015 dezembro",
@@ -96,7 +91,7 @@ const Cursos: React.FC = () => {
 
     return <Layout>
         <div className='info'>
-            <h1> <i className='icon icon-certificate' /> Cursos</h1>
+            <h1> <i className='icon icon-chalkboard-teacher' /> Cursos</h1>
         </div>
         <div className="courses">
             {

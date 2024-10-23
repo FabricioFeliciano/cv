@@ -3,7 +3,7 @@
 
     >.education {
         width: 400px;
-        max-width: 100%;
+        max-width: calc(100% - 10px);
     }
 
     &.selected {

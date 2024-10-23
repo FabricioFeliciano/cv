@@ -8,8 +8,19 @@ const Experiencia: React.FC = () => {
 
     const employments = [
         {
+            company: "Supero",
+            logo: "employment04.png",
+            position: "Desenvolvedor Full Stack Sênior",
+            period: 'agosto 2023 e atualmente',
+            missions: [
+                "Desenvolvimento de sistemas de gestão dedicados a um cliente específico",
+                "Estrutura de banco, APIs e front-end"
+            ],
+            skills: [".NET", "C#", "Bootstrap", "MSSQLServer", "MongoDB", "API", "DDD", "TFS"]
+        },
+        {
             company: "Processor",
-            logo: "employment01.png",
+            logo: "employment03.png",
             position: "Desenvolvedor Full Stack Sênior",
             period: 'junho 2020 até junho 2023',
             missions: [
@@ -32,7 +43,7 @@ const Experiencia: React.FC = () => {
         },
         {
             company: "Daticopy",
-            logo: "employment03.png",
+            logo: "employment01.png",
             position: "Desenvolvedor",
             period: 'Maio 2005 até maio 2014',
             missions: [

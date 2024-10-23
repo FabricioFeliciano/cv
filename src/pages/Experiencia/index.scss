@@ -55,7 +55,7 @@
 @media only screen and (max-width: 767px) {
     .employments {
         >.employment {
-            width: 100%;
+            width: calc(100% - 10px);
             max-width: none;
 
             >img {
