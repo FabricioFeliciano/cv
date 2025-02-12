@@ -23,7 +23,7 @@ const Mais: React.FC = () => {
                         <img src={familia01} />
                         <div className="info">
                             <ul>
-                                <li>46 anos</li>
+                                <li>48 anos</li>
                                 <li>Heterossexual</li>
                                 <li>Cisgênero</li>
                             </ul>

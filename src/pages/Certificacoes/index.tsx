@@ -9,39 +9,11 @@ const Certificacoes: React.FC = () => {
     const certifications = [
 
         {
-            name: "Criar designs e protótipos de alta fidelidade no Figma",
+            name: "Google UX Design",
             school: "Google",
-            date: "agosto 2024",
-            image: "certification09.png",
-            url: "https://www.coursera.org/account/accomplishments/verify/2MT4G5YZXH31"
-        },
-        {
-            name: "Conduzir pesquisas de UX e testar os primeiros conceitos",
-            school: "Google",
-            date: "abril 2024",
-            image: "certification08.png",
-            url: "https://www.coursera.org/account/accomplishments/verify/4JQB6F5D552B"
-        },
-        {
-            name: "Criar wireframes e protótipos de baixa fidelidade",
-            school: "Google",
-            date: "março 2024",
-            image: "certification07.png",
-            url: "https://www.coursera.org/account/accomplishments/verify/3LQWVB277FRJ"
-        },
-        {
-            name: "Iniciar o processo de design de UX: criar empatia, definir e idealizar",
-            school: "Google",
-            date: "janeiro 2024",
-            image: "certification06.png",
-            url: "https://www.coursera.org/account/accomplishments/verify/BYBT6JDQS39H"
-        },
-        {
-            name: "Fundamentos do design da experiência do usuário (UX)",
-            school: "Google",
-            date: "dezembro 2023",
+            date: "janeiro 2025",
             image: "certification05.png",
-            url: "https://www.coursera.org/account/accomplishments/verify/E5VGGL6GFAJB"
+            url: "https://www.coursera.org/account/accomplishments/professional-cert/9FP6I77A45MT"
         },
         {
             name: "AI for Devs",
